@@ -80,6 +80,28 @@ export const store = createStore({
         return false;
       }
     },
+
+    async submitQuestion(store, question) {
+      try {
+        const newQuestion = {
+          question: question.question,
+          choices: [
+            question.choice1,
+            question.choice2,
+            question.choice3,
+            question.choice4,
+          ],
+          image_url: "https://dummyimage.com/600x400/000/fff.png&text=question+1+image+(600x400)",
+          thumb_url: "https://dummyimage.com/120x120/000/fff.png&text=question+1+image+(120x120)",
+        };
+
+        await api.post('/questions', newQuestion);
+        return true;
+      } catch (err) {
+        console.log(err);
+        return false;
+      }
+    }
   },
   mutations: {
     setQuestions(state, questions) {

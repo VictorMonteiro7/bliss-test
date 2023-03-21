@@ -64,7 +64,7 @@ http://localhost:5173
 
 ## Dependencies
 * floating-vue (Used to create floating notification in some buttons/components.)
-* vue-toast-notification (Used to create notifications.)
+* vue-toast-notification (Used to create tooltips.)
 * vue-router (Used to create routes.)
 * vuex (Used to create a global state.)
 * SaSS (Used to create styles.)

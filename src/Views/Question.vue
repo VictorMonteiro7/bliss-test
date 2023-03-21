@@ -124,7 +124,7 @@ async function handleShare() {
       <div>
         <Button
           text="Share this poll"
-          customClass="bg-green-light text-white-normal fw-bold"
+          customClass="share bg-green-light text-white-normal fw-bold"
           v-on:@edit="openShareModal = true"
         />
       </div>

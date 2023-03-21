@@ -18,6 +18,10 @@ const props = defineProps({
     type: String,
     default: 'Be careful!',
   },
+  size: {
+    type: String,
+    default: 'sm',
+  },
 });
 const modalContainer = ref(null);
 const emit = defineEmits(['@close', '@delete']);
@@ -39,6 +43,15 @@ const handleClickOutside = (e) => {
   }
 };
 
+const modalSize = computed(() => {
+  const objSize = {
+    sm: 'max-vw-20',
+    md: 'max-vw-30',
+    lg: 'max-vw-40',
+  };
+  return objSize[props.size] || objSize.sm;
+});
+
 </script>
 
 <template>
@@ -49,7 +62,10 @@ const handleClickOutside = (e) => {
       ref="modalContainer"
       v-on:click="handleClickOutside"
     >
-      <div class="wrapper max-vw-20 w-100-percent bg-white-normal">
+      <div
+        class="wrapper w-100-percent bg-white-normal"
+        v-bind:class="modalSize"
+      >
         <template v-if="!disableHeader">
           <slot name="header">
             <div

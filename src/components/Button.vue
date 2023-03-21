@@ -30,6 +30,10 @@ const props = defineProps({
     type: String,
     default: 'fs-xs',
   },
+  disableCustomSize: {
+    type: Boolean,
+    default: false,
+  },
 });
 const variantChoosed = computed(() => {
   const objActions = {
@@ -72,6 +76,9 @@ const loadingClass = computed(() => {
 });
 
 const customSize = computed(() => {
+  if (props.disableCustomSize) {
+    return '';
+  }
   const objSizes = {
     sm: 'px-2 py-1',
     smE: 'p-2',
@@ -111,6 +118,9 @@ button {
     }
     &.delete {
       background-color: $red-normal !important;
+    }
+    &.share {
+      background-color: $green-normal !important;
     }
   }
   &[disabled] {
