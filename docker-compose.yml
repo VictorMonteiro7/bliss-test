@@ -8,3 +8,5 @@ services:
     container_name: client
     volumes:
       - .:/app
+    environment:
+      VITE_URL_APP: ${VITE_URL_APP}
