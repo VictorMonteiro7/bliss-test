@@ -1,0 +1,56 @@
+@import 'colors';
+
+$border-width: (
+  '1': 1px,
+  '2': 2px,
+  '3': 3px,
+  '4': 4px,
+  '5': 5px,
+  '6': 6px,
+  '7': 7px,
+  '8': 8px,
+  '9': 9px,
+  '10': 10px,
+);
+
+@each $key, $value in $border-width {
+  .border-#{$key} {
+    border-width: $value !important;
+    border-style: solid !important;
+  }
+}
+
+$border-style: (
+  'solid': solid,
+  'dashed': dashed,
+  'dotted': dotted,
+  'double': double,
+  'groove': groove,
+  'ridge': ridge,
+  'inset': inset,
+  'outset': outset,
+  'none': none,
+  'hidden': hidden,
+);
+
+@each $key, $value in $border-style {
+  .border-#{$key} {
+    border-style: $value !important;
+  }
+}
+
+$border-directions: (
+  'top': top,
+  'right': right,
+  'bottom': bottom,
+  'left': left,
+  'all': all,
+);
+
+@each $key, $direction in $border-directions {
+  .border-#{$direction} {
+    &-0 {
+      border-#{$direction}-width: 0 !important;
+    }
+  }
+}

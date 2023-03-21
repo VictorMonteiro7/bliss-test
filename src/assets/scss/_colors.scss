@@ -1,0 +1,45 @@
+$purple-normal: #83a;
+$purple-light: #b3d;
+$red-normal: #a33;
+$red-light: #d33;
+$white-normal: #fefefe;
+$white-light: #f1f1f1;
+$black-normal: #0e0e0e;
+$black-light: #1f1f1f;
+$green-normal: #28A745;
+$green-light: #2ECC71;
+$transparent: transparent;
+$primary: #02416d;
+$primary-light: #02385E;
+$gray-600: #6b7280;
+
+$colors: (
+  'purple-normal': $purple-normal,
+  'purple-light': $purple-light,
+  'red-normal': $red-normal,
+  'red-light': $red-light,
+  'green-normal': $green-normal,
+  'green-light': $green-light,
+  'black-normal': $black-normal,
+  'black-light': $black-light,
+  'white-normal': $white-normal,
+  'white-light': $white-light,
+  'primary': $primary,
+  'primary-light': $primary-light,
+  'gray-600': $gray-600,
+  'transparent': $transparent,
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  .text-#{$name} {
+    color: $color !important;
+  }
+
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}

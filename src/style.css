@@ -1,12 +1,11 @@
-:root {
-  font-family: 'Roboto', sans-serif;
-  --black: #0e0e0e;
-  --purple: #83a;
-  --white: #fefefe;
-  --green: #37e218;
-}
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
 }

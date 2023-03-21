@@ -1,0 +1,30 @@
+@import
+  '_customScrollbar',
+  '_customFlex',
+  '_customWidth',
+  '_customHeight',
+  '_customMargin',
+  '_customPadding',
+  '_colors',
+  'cursor',
+  'fontStyle',
+  'option',
+  'border',
+  'grid';
+
+:root {
+  --purple: #{$purple-normal};
+  --purple-light: #{$purple-light};
+  --red: #{$red-normal};
+  --red-light: #{$red-light};
+  --green: #{$green-normal};
+  --green-light: #{$green-light};
+  --black: #{$black-normal};
+  --black-light: #{$black-light};
+  --white: #{$white-normal};
+  --white-light: #{$white-light};
+  --transparent: #{$transparent};
+  --primary: #{$primary};
+  --primary-light: #{$primary-light};
+  font-family: 'Roboto', sans-serif;
+}

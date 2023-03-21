@@ -1,0 +1,44 @@
+$font-size: (
+  'xxs': 0.625rem,
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  'xxl': 1.5rem,
+  'xxxl': 2rem,
+);
+
+@each $key, $value in $font-size {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}
+
+$font-weight: (
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+@each $key, $value in $font-weight {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}
+
+$font-style: (
+  'italic': italic,
+  'normal': normal,
+);
+
+@each $key, $value in $font-style {
+  .fs-#{$key} {
+    font-style: $value;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

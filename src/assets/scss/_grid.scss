@@ -1,0 +1,43 @@
+$grid-gapping: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+);
+
+$grid-columns: (
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10,
+  11: 11,
+  12: 12,
+);
+
+.grid {
+  display: grid;
+
+  @media (max-width: 1250px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@each $key, $gapping in $grid-gapping {
+  .grid-gap-#{$key} {
+    grid-gap: $gapping;
+  }
+}
+
+@each $key, $columns in $grid-columns {
+  .grid-cols-#{$key} {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}

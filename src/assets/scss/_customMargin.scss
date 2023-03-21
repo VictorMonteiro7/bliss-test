@@ -1,0 +1,45 @@
+$margin-spacing: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  6: 6rem,
+  7: 12rem,
+  8: 24rem,
+  9: 48rem,
+  10: 96rem,
+);
+
+@each $name, $n in $margin-spacing {
+  .m-#{$name} {
+    margin: $n !important;
+  }
+
+  .mt-#{$name} {
+    margin-top: $n !important;
+  }
+
+  .mr-#{$name} {
+    margin-right: $n !important;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $n !important;
+  }
+
+  .ml-#{$name} {
+    margin-left: $n !important;
+  }
+
+  .mx-#{$name} {
+    margin-right: $n !important;
+    margin-left: $n !important;
+  }
+
+  .my-#{$name} {
+    margin-top: $n !important;
+    margin-bottom: $n !important;
+  }
+}

@@ -21,9 +21,7 @@ export default {
           isHealthy.value = false;
         } else {
           isHealthy.value = true;
-          if (this.$route.query.filter) {
-            this.$router.push({ name: 'questions', query: { filter: this.$route.query.filter } });
-          } else {
+          if (this.$route.name === 'questions' || this.$route.name === undefined) {
             this.$router.push({ name: 'questions', query: { ...this.$route.query } });
           }
         }
@@ -77,5 +75,6 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  padding: 5rem 5rem;
 }
 </style>

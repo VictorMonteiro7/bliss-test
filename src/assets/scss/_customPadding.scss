@@ -1,0 +1,45 @@
+$padding-spacing: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  6: 6rem,
+  7: 12rem,
+  8: 24rem,
+  9: 48rem,
+  10: 96rem,
+);
+
+@each $name, $n in $padding-spacing {
+  .p-#{$name} {
+    padding: $n !important;
+  }
+
+  .pt-#{$name} {
+    padding-top: $n !important;
+  }
+
+  .pr-#{$name} {
+    padding-right: $n !important;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: $n !important;
+  }
+
+  .pl-#{$name} {
+    padding-left: $n !important;
+  }
+
+  .px-#{$name} {
+    padding-right: $n !important;
+    padding-left: $n !important;
+  }
+
+  .py-#{$name} {
+    padding-top: $n !important;
+    padding-bottom: $n !important;
+  }
+}

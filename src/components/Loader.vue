@@ -1,28 +1,20 @@
-<script>
-import { ref } from 'vue';
-
-export default {
-  name: 'loader',
-  setup() {
-    const loading = ref(false);
-    return { loading };
-  },
-};
+<script setup>
 </script>
 
 <template>
   <div id="loader"></div>
 </template>
 
-<style>
+<style scoped lang="scss">
+@import '@/assets/scss/_colors.scss';
   #loader {
     display: block;
     position: absolute;
     width: 50px;
     height: 50px;
     margin: 25% auto 0 auto;
-    border: 10px solid var(--purple);
-    border-top-color: var(--white);
+    border: 10px solid $primary;
+    border-top-color: $white-normal;
     border-radius: 50%;
     top: 0;
     left: 50%;

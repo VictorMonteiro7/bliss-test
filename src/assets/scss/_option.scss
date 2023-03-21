@@ -1,0 +1,11 @@
+@import 'colors';
+
+.option {
+  display: flex;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 5px;
+  background: $primary;
+  color: $white-normal;
+  font-weight: 700;
+}
