@@ -1,6 +1,8 @@
 # Make Your Question  
 
-Bliss application test - Make Your Question
+Bliss application test - Make Your Question  
+
+![image](https://user-images.githubusercontent.com/84861666/226640366-d41e0f31-3231-4606-a315-b91b3f61116b.png)
 
 ## How to clone the project
 
@@ -63,11 +65,11 @@ http://localhost:5173
 --- 
 
 ## Dependencies
-* floating-vue (Used to create floating notification in some buttons/components.)
-* vue-toast-notification (Used to create tooltips.)
-* vue-router (Used to create routes.)
-* vuex (Used to create a global state.)
-* SaSS (Used to create styles.)
+* floating-vue (Used to create floating notification in some buttons/components)
+* vue-toast-notification (Used to create tooltips)
+* vue-router (Used to create routes)
+* vuex (Used to create a global state)
+* SaSS (Used to create styles)
 
 
 #### Author
